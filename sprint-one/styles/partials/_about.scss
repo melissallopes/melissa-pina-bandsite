@@ -1,0 +1,85 @@
+.about {
+  font-family: "AvenirBold", "AvenirDemiBold", "AvenirRegular";
+
+  &__title {
+    margin: 32px 16px 24px 16px;
+  }
+  &__image {
+    width: 288px;
+    height: 166px;
+  }
+  &__image-box {
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    font-family: "AvenirDemiBold";
+    margin: 24px 16px 32px 16px;
+    text-align: justify;
+  }
+  &__sign {
+    font-family: AvenirDemiBold;
+    margin: 0 16px;
+  }
+  &__names {
+    margin: 40px 16px 24px 16px;
+    &-text {
+      display: flex;
+      flex-direction: column;
+      margin: 0 16px 40px 16px;
+
+      &__right {
+        font-family: AvenirRegular;
+      }
+      &__left {
+        font-family: AvenirRegular;
+      }
+    }
+  }
+}
+
+@include medium {
+  .about__title {
+    margin: 40px 24px;
+    font-size: 2.5rem;
+  }
+}
+
+@include large {
+  .main-content {
+    flex-direction: row;
+    &__left {
+      flex: 50%;
+      padding: 20px;
+    }
+    &__right {
+      flex: 50%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    &__section {
+      flex: 2;
+    }
+    &__blogpost {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 40%;
+      height: 40%;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@include huge {
+  .main-content {
+    height: 80vh;
+    &__product {
+      flex: 0.33;
+      height: unset;
+      margin: 20px;
+    }
+  }
+}

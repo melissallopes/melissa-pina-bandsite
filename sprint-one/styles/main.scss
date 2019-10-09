@@ -1,0 +1,22 @@
+@charset 'utf-8';
+@import "./partials/breakpoints";
+@import "./partials/colors";
+@import "./partials/fonts";
+@import "./partials/nav-bar";
+@import "./partials/hero";
+@import "./partials/about";
+@import "./partials/gallery";
+@import "./partials/footer";
+
+html,
+body {
+  font-family: "AvenirRegular", "AvenirBold", "AvenirDemiBold";
+  color: $Black;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+*,
+* *:after {
+  box-sizing: inherit;
+}

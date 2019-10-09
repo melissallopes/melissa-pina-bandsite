@@ -1,0 +1,33 @@
+.hero__image {
+  background-image: url(../assets/Images/unsplash.jpg);
+  position: relative;
+  height: 183px;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__text {
+  position: absolute;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin: 16px;
+  color: $White;
+  font-family: "AvenirBold";
+  font-size: 20px;
+}
+
+@include medium {
+  .hero__image {
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__text {
+    font-size: 2.5rem;
+    margin: auto 16px;
+  }
+}

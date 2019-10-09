@@ -1,0 +1,32 @@
+.footer {
+  background-color: #323232;
+
+  &__title {
+    font-family: AvenirBold;
+    color: $White;
+    margin: 20px 16px;
+    padding-top: 50px;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__names {
+    margin: 0 16px;
+    color: $White;
+    font-family: AvenirRegular;
+    line-height: 1.4;
+    font-size: small;
+  }
+}
+
+.footer__names--padding {
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+.icons {
+  color: $Mercury;
+  margin: 16px;
+}

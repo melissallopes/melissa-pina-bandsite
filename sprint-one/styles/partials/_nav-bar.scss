@@ -1,0 +1,70 @@
+.nav-bar {
+  background-color: $Black;
+  display: flex;
+  height: 80px;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &--logo {
+    width: 150px;
+    height: 110px;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 15px;
+    padding: 0px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $Mercury;
+    margin: 26px;
+    padding-bottom: 7px;
+
+    &:hover {
+      color: $White;
+      border-bottom: solid white;
+    }
+  }
+}
+
+@include medium {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+
+    &--logo {
+      width: 140px;
+      height: 40px;
+      margin: 20px 16px;
+    }
+
+    &__items {
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    &__link {
+      padding-bottom: 26px;
+    }
+  }
+}
+
+@include large {
+  .header {
+    &__company-name {
+      font-size: 2rem;
+      padding: 40px;
+    }
+    &__menu-item {
+      font-size: 1.3rem;
+    }
+  }
+}
