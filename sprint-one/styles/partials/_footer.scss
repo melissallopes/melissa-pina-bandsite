@@ -4,29 +4,51 @@
   &__title {
     font-family: AvenirBold;
     color: $White;
-    margin: 20px 16px;
-    padding-top: 50px;
+    margin: 6.2vw 5vw;
+    padding-top: 15.6vw;
   }
 
   &__icons {
     display: flex;
     justify-content: flex-start;
   }
+  &__logo {
+    display: none;
+  }
   &__names {
-    margin: 0 16px;
+    font-size: 3.4vw;
+    margin: 0 5vw;
     color: $White;
     font-family: AvenirRegular;
-    line-height: 1.4;
-    font-size: small;
   }
-}
-
-.footer__names--padding {
-  padding-bottom: 30px;
-  margin: 0;
+  &__names--padding {
+    padding-bottom: 9.3vw;
+    margin-left: 5vw;
+  }
 }
 
 .icons {
   color: $Mercury;
-  margin: 16px;
+  margin: 5vw;
+}
+
+@include medium {
+  .footer {
+    height: 65.1vw;
+    display: flex;
+
+    &__title {
+      padding: 3vw 3vw 3vw 0vw;
+      margin: 3.1vw;
+      align-self: end;
+    }
+    &__icons {
+      height: fit-content;
+      margin: 2vw;
+    }
+    &__logo {
+      display: inline-block;
+      margin: 7vw 5vw;
+    }
+  }
 }
