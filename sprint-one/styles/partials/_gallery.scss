@@ -18,7 +18,6 @@
 }
 @include medium {
   .gallery {
-    height: 80vh;
     &__title {
       font-size: 5vw;
       font-family: AvenirBold;
@@ -33,8 +32,25 @@
     }
     &__photos {
       width: 29vw;
-      height: 16vw;
+      height: 16.4vw;
       margin: 1.55vw;
+    }
+  }
+}
+
+@include large {
+  .gallery {
+    &__title {
+      font-size: 3vw;
+      padding: 5vw 0;
+      margin: 0 12.5vw;
+    }
+    &__photos {
+      width: 23.8vw;
+      height: 13.4vw;
+    }
+    &__images {
+      padding: 0 2.5vw 5vw 2.5vw;
     }
   }
 }

@@ -14,7 +14,7 @@
     justify-content: center;
   }
   &__text {
-    font-family: "AvenirDemiBold";
+    font-family: "AvenirBold";
     margin: 7.5vw 5vw 10vw 5vw;
     text-align: justify;
   }
@@ -24,6 +24,7 @@
   }
   &__names {
     margin: 12.4vw 5vw 7.5vw 5vw;
+    font-size: 5vw;
     &-text {
       display: flex;
       flex-direction: column;
@@ -52,8 +53,9 @@
       height: 362px;
     }
     &__text {
-      font-size: 4vw;
-      margin: 6vw 3.1vw;
+      font-size: 3.5vw;
+      font-family: AvenirBold;
+      margin-bottom: 4.5vw;
     }
     &__sign {
       font-size: 2.5vw;
@@ -69,6 +71,39 @@
           margin-left: 3.1vw;
         }
       }
+    }
+  }
+}
+
+@include large {
+  .about {
+    width: 100vw;
+
+    &__title {
+      font-size: 3vw;
+      margin: 3.3vw 12.5vw;
+    }
+    &__image {
+      width: 62.2vw;
+      height: 31.25vw;
+    }
+    &__text {
+      margin: 3.3vw 24vw 2.7vw 19vw;
+      font-size: 1.7vw;
+    }
+    &__sign {
+      font-size: 1.4vw;
+      margin-left: 19vw;
+    }
+    &__names {
+      font-size: 1.7vw;
+      margin-top: 2vw;
+    }
+    &__musician {
+      margin: 3.8vw 16vw 2.2vw 16vw;
+    }
+    &__names-text__left {
+      margin-left: 2.7vw;
     }
   }
 }

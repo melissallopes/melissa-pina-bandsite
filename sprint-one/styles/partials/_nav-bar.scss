@@ -25,7 +25,7 @@
     color: $Mercury;
     font-size: 4vw;
     margin: 8.1vw;
-    padding-bottom: 2.1vw;
+    padding-bottom: 3.4vw;
 
     &:hover {
       color: $White;
@@ -50,10 +50,13 @@
 
     &__items {
       flex-direction: row;
+      margin: 0;
       justify-content: space-evenly;
     }
     &__link {
       padding-bottom: 3.4vw;
+      font-size: 2vw;
+      margin: 0 0 0 2vw;
     }
   }
 }
@@ -68,13 +71,14 @@
     justify-content: flex-start;
 
     &--logo {
-      width: 10vw;
+      width: 8vw;
       height: 2vw;
-      margin: 0 12.5vw;
+      margin: 0 3.8vw 0 12.5vw;
     }
     &__link {
-      font-size: 1.1vw;
-      margin: 0 1.4vw;
+      font-size: 0.9vw;
+      margin: 0 3.8vw 0 0;
+      padding-bottom: 1.2vw;
     }
     &__items {
       margin: 0;
