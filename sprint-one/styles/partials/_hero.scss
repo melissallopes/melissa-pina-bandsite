@@ -9,7 +9,7 @@
 
 .hero__text {
   position: absolute;
-  margin: 5vw;
+  margin: 12vw 5vw;
   color: $White;
   font-family: "AvenirBold";
   font-size: 5vw;
@@ -30,8 +30,17 @@
     line-height: 1.4;
   }
 }
-
 @include large {
+  .hero__text {
+    font-size: 4vw;
+    margin-left: 2vw;
+  }
+  .hero__image-one {
+    height: 45vw;
+  }
+}
+
+@include huge {
   .hero {
     &__image {
       height: 46.5vw;

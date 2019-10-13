@@ -63,6 +63,21 @@
 
 @include large {
   .nav-bar {
+    height: 5vw;
+    &--logo {
+      width: 8vw;
+      height: 5vw;
+      margin: 2vw;
+    }
+    &__link {
+      font-size: 1.2vw;
+      padding-bottom: 1.3vw;
+    }
+  }
+}
+
+@include huge {
+  .nav-bar {
     width: 100vw;
     height: 5.5vh;
     background-color: $Black;

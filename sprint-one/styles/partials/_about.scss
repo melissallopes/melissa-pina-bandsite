@@ -74,8 +74,36 @@
     }
   }
 }
-
 @include large {
+  .about {
+    &__title {
+      font-size: 4vw;
+      margin-left: 2vw;
+    }
+    &__image {
+      width: 60vw;
+      height: 40vw;
+    }
+    &__text {
+      font-size: 2.7vw;
+      margin: 5vw 10vw;
+    }
+    &__sign {
+      margin-left: 10vw;
+    }
+    &__names {
+      margin-left: 2vw;
+    }
+    &__names-text {
+      margin: 2vw;
+    }
+    &__musician {
+      margin: 0 10vw;
+    }
+  }
+}
+
+@include huge {
   .about {
     width: 100vw;
 

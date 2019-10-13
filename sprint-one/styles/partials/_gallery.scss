@@ -10,6 +10,11 @@
   &__photos {
     width: 90vw;
     margin: 2.5vw 5vw;
+    filter: grayscale(0.6);
+
+    &:hover {
+      filter: grayscale(0);
+    }
   }
   &__images {
     display: flex;
@@ -29,6 +34,7 @@
       flex-wrap: wrap;
       justify-content: center;
       flex-direction: row;
+      padding-bottom: 5vw;
     }
     &__photos {
       width: 29vw;
@@ -37,8 +43,15 @@
     }
   }
 }
-
 @include large {
+  .gallery {
+    &__title {
+      font-size: 4vw;
+    }
+  }
+}
+
+@include huge {
   .gallery {
     &__title {
       font-size: 3vw;

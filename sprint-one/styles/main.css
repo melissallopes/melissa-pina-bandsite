@@ -1,5 +1,6 @@
-/*media query for tablet*/
-/* media query for high pixel density desktops */
+/*media query for 768px tablet*/
+/*media query for 1024px desktops */
+/* media query for 1440 pixel density desktops */
 @font-face {
   src: url("../../sprint-one/assets/fonts/AvenirNextLTPro-Regular.otf");
   font-family: "AvenirRegular";
@@ -111,6 +112,21 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .nav-bar {
+    height: 5vw;
+  }
+  .nav-bar--logo {
+    width: 8vw;
+    height: 5vw;
+    margin: 2vw;
+  }
+  .nav-bar__link {
+    font-size: 1.2vw;
+    padding-bottom: 1.3vw;
+  }
+}
+
 @media only screen and (min-width: 1440px) {
   .nav-bar {
     width: 100vw;
@@ -153,7 +169,7 @@
 
 .hero__text {
   position: absolute;
-  margin: 5vw;
+  margin: 12vw 5vw;
   color: #FFFFFF;
   font-family: "AvenirBold";
   font-size: 5vw;
@@ -175,6 +191,16 @@
     margin: auto 2vw;
     font-size: 5.2vw;
     line-height: 1.4;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .hero__text {
+    font-size: 4vw;
+    margin-left: 2vw;
+  }
+  .hero__image-one {
+    height: 45vw;
   }
 }
 
@@ -283,6 +309,33 @@
   }
 }
 
+@media only screen and (min-width: 1024px) {
+  .about__title {
+    font-size: 4vw;
+    margin-left: 2vw;
+  }
+  .about__image {
+    width: 60vw;
+    height: 40vw;
+  }
+  .about__text {
+    font-size: 2.7vw;
+    margin: 5vw 10vw;
+  }
+  .about__sign {
+    margin-left: 10vw;
+  }
+  .about__names {
+    margin-left: 2vw;
+  }
+  .about__names-text {
+    margin: 2vw;
+  }
+  .about__musician {
+    margin: 0 10vw;
+  }
+}
+
 @media only screen and (min-width: 1440px) {
   .about {
     width: 100vw;
@@ -329,6 +382,13 @@
 .gallery__photos {
   width: 90vw;
   margin: 2.5vw 5vw;
+  -webkit-filter: grayscale(0.6);
+          filter: grayscale(0.6);
+}
+
+.gallery__photos:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 
 .gallery__images {
@@ -361,11 +421,18 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding-bottom: 5vw;
   }
   .gallery__photos {
     width: 29vw;
     height: 16.4vw;
     margin: 1.55vw;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .gallery__title {
+    font-size: 4vw;
   }
 }
 
@@ -402,6 +469,7 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-left: 5vw;
 }
 
 .footer__logo {
@@ -413,6 +481,15 @@
   margin: 0 5vw;
   color: #FFFFFF;
   font-family: AvenirRegular;
+}
+
+.footer__names--mail {
+  text-decoration: none;
+  color: white;
+}
+
+.footer__names--mail:hover {
+  cursor: pointer;
 }
 
 .footer__names--padding {
@@ -456,7 +533,7 @@
     display: inline-block;
     width: 15vw;
     height: 15vw;
-    margin: 1.2vw 0 0 3vw;
+    margin: 1.2vw 0 0 20vw;
   }
   .footer__names {
     font-size: 1.6vw;
@@ -476,18 +553,55 @@
   }
 }
 
+.icons {
+  margin: 2vw;
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer__title {
+    font-size: 4vw;
+    margin-left: 2vw;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .footer__logo {
+    width: 13vw;
+    height: 15vw;
+    margin-left: 24vw;
+  }
+  .footer__icons {
+    padding-top: 3vw;
+    margin-left: 9vw;
+  }
+  .footer__names {
+    font-size: 1.2vw;
+    margin: 0 5vw;
+  }
+  .footer__names--padding {
+    margin-left: 1.3vw;
+  }
+}
+
 @media only screen and (min-width: 1440px) {
+  .footer__head {
+    margin-left: 9vw;
+  }
   .footer__title {
     font-size: 3vw;
     padding-right: 2vw;
   }
   .footer__logo {
     width: 10vw;
-    height: 13vw;
-    margin-left: 40vw;
+    height: 12vw;
+    margin-left: 41vw;
+  }
+  .footer__icons {
+    margin-left: 2vw;
+    padding-top: 3vw;
   }
   .footer__names {
     font-size: 0.9vw;
+    margin: 0;
   }
   .footer__names--padding {
     margin-left: 9vw;
@@ -497,9 +611,6 @@
         -ms-flex-pack: start;
             justify-content: flex-start;
     margin-left: 10vw;
-  }
-  .footer__head {
-    margin-left: 8vw;
   }
   .icons {
     margin: 2vw 1vw;
