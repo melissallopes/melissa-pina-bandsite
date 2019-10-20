@@ -1,0 +1,69 @@
+.gallery {
+  background-color: $Alabaster;
+
+  &__title {
+    font-family: AvenirBold;
+    margin: 0 5vw 2.5vw 5vw;
+    text-align: left;
+    padding: 9.3vw 0 3.1vw 0;
+  }
+  &__photos {
+    width: 90vw;
+    margin: 2.5vw 5vw;
+    filter: grayscale(0.6);
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+  &__images {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@include medium {
+  .gallery {
+    &__title {
+      font-size: 5vw;
+      font-family: AvenirBold;
+      padding: 6vw 3.1vw 3vw 0;
+      margin: 0 5vw 2.5vw 3.1vw;
+    }
+    &__images {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: row;
+      padding-bottom: 5vw;
+    }
+    &__photos {
+      width: 29vw;
+      height: 16.4vw;
+      margin: 1.55vw;
+    }
+  }
+}
+@include large {
+  .gallery {
+    &__title {
+      font-size: 4vw;
+    }
+  }
+}
+
+@include huge {
+  .gallery {
+    &__title {
+      font-size: 3vw;
+      padding: 5vw 0;
+      margin: 0 12.5vw;
+    }
+    &__photos {
+      width: 23.8vw;
+      height: 13.4vw;
+    }
+    &__images {
+      padding: 0 2.5vw 5vw 2.5vw;
+    }
+  }
+}

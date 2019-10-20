@@ -1,0 +1,53 @@
+.hero__image {
+  background-image: url(../assets/Images/unsplash.jpg);
+  position: relative;
+  height: 57.2vw;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero__text {
+  position: absolute;
+  margin: 12vw 5vw;
+  color: $White;
+  font-family: "AvenirBold";
+  font-size: 5vw;
+  line-height: 12vw;
+}
+
+@include medium {
+  .hero__image {
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    align-items: center;
+  }
+
+  .hero__text {
+    margin: auto 2vw;
+    font-size: 5.2vw;
+    line-height: 1.4;
+  }
+}
+@include large {
+  .hero__text {
+    font-size: 4vw;
+    margin-left: 2vw;
+  }
+  .hero__image-one {
+    height: 45vw;
+  }
+}
+
+@include huge {
+  .hero {
+    &__image {
+      height: 46.5vw;
+    }
+    &__text {
+      font-size: 3.1vw;
+      margin: 0 12.5vw;
+    }
+  }
+}

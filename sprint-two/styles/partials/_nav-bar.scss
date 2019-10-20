@@ -1,0 +1,102 @@
+.nav-bar {
+  width: 100vw;
+  background-color: $Black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  &--logo {
+    width: 46.8vw;
+    height: 4vh;
+    margin: 0 auto;
+    margin-top: 4.6vw;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: 4.6vw;
+    padding: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $Mercury;
+    font-size: 4vw;
+    margin: 8.1vw;
+    padding-bottom: 3.4vw;
+
+    &:hover {
+      color: $White;
+      border-bottom: solid white;
+    }
+  }
+}
+
+@include medium {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 10.4vw;
+
+    &--logo {
+      width: 18.2vw;
+      height: 5.2vw;
+      margin: 2.6vw 3.1vw;
+    }
+
+    &__items {
+      flex-direction: row;
+      margin: 0;
+      justify-content: space-evenly;
+    }
+    &__link {
+      padding-bottom: 3.4vw;
+      font-size: 2vw;
+      margin: 0 0 0 2vw;
+    }
+  }
+}
+
+@include large {
+  .nav-bar {
+    height: 5vw;
+    &--logo {
+      width: 8vw;
+      height: 5vw;
+      margin: 2vw;
+    }
+    &__link {
+      font-size: 1.2vw;
+      padding-bottom: 1.3vw;
+    }
+  }
+}
+
+@include huge {
+  .nav-bar {
+    width: 100vw;
+    height: 5.5vh;
+    background-color: $Black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    &--logo {
+      width: 8vw;
+      height: 2vw;
+      margin: 0 3.8vw 0 12.5vw;
+    }
+    &__link {
+      font-size: 0.9vw;
+      margin: 0 3.8vw 0 0;
+      padding-bottom: 1.2vw;
+    }
+    &__items {
+      margin: 0;
+    }
+  }
+}
