@@ -315,8 +315,8 @@
     margin-left: 2vw;
   }
   .about__image {
-    width: 60vw;
-    height: 40vw;
+    width: 50vw;
+    height: 30vw;
   }
   .about__text {
     font-size: 2.7vw;
@@ -326,10 +326,10 @@
     margin-left: 10vw;
   }
   .about__names {
-    margin-left: 2vw;
+    margin-left: 1vw;
   }
   .about__names-text {
-    margin: 2vw;
+    margin: 2vw 5vw;
   }
   .about__musician {
     margin: 0 10vw;
@@ -345,16 +345,16 @@
     margin: 3.3vw 12.5vw;
   }
   .about__image {
-    width: 62.2vw;
+    width: 58vw;
     height: 31.25vw;
   }
   .about__text {
-    margin: 3.3vw 24vw 2.7vw 19vw;
+    margin: 3.3vw 24vw 2.7vw 21vw;
     font-size: 1.7vw;
   }
   .about__sign {
     font-size: 1.4vw;
-    margin-left: 19vw;
+    margin-left: 21vw;
   }
   .about__names {
     font-size: 1.7vw;
@@ -434,6 +434,11 @@
   .gallery__title {
     font-size: 4vw;
   }
+  .gallery__photos {
+    width: 26vw;
+    height: 18vw;
+    margin: 1vw;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
@@ -443,8 +448,9 @@
     margin: 0 12.5vw;
   }
   .gallery__photos {
-    width: 23.8vw;
-    height: 13.4vw;
+    width: 24vw;
+    height: 14vw;
+    margin: 0.8vw;
   }
   .gallery__images {
     padding: 0 2.5vw 5vw 2.5vw;

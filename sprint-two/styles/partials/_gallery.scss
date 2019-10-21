@@ -48,6 +48,11 @@
     &__title {
       font-size: 4vw;
     }
+    &__photos {
+      width: 26vw;
+      height: 18vw;
+      margin: 1vw;
+    }
   }
 }
 
@@ -59,8 +64,9 @@
       margin: 0 12.5vw;
     }
     &__photos {
-      width: 23.8vw;
-      height: 13.4vw;
+      width: 24vw;
+      height: 14vw;
+      margin: 0.8vw;
     }
     &__images {
       padding: 0 2.5vw 5vw 2.5vw;
