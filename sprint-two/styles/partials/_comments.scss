@@ -59,7 +59,7 @@
   }
 
   &__button {
-    background-color: $Black;
+    background-color: $Black-opacity;
     border-radius: 2vw;
     color: white;
     padding: 15px 32px;
@@ -68,6 +68,10 @@
     cursor: pointer;
     width: 60vw;
     margin: 5vw 6vw;
+
+    &:hover {
+      background-color: black;
+    }
   }
   &__row {
     margin: 10vw 0 15vw 0;

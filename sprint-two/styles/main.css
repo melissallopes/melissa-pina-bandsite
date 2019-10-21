@@ -75,6 +75,11 @@
   border-bottom: solid white;
 }
 
+.nav-bar__link:active {
+  color: #FFFFFF;
+  border-bottom: solid white;
+}
+
 @media only screen and (min-width: 768px) {
   .nav-bar {
     -webkit-box-orient: horizontal;
@@ -704,6 +709,10 @@
   text-align: center;
 }
 
+.shows__mobile-button:hover {
+  background-color: black;
+}
+
 .shows-table {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1002,6 +1011,10 @@
   cursor: pointer;
   width: 60vw;
   margin: 5vw 6vw;
+}
+
+.comments__button:hover {
+  background-color: black;
 }
 
 .comments__row {

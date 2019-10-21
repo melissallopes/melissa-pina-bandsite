@@ -62,7 +62,7 @@
 }
 
 .shows__mobile-button {
-  background-color: $Black;
+  background-color: $Black-opacity;
   border-radius: 2vw;
   color: white;
   padding: 15px 32px;
@@ -71,6 +71,9 @@
   cursor: pointer;
   width: 85vw;
   text-align: center;
+  &:hover {
+    background-color: black;
+  }
 }
 
 .shows-table {
