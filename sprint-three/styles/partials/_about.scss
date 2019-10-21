@@ -1,0 +1,137 @@
+.about {
+  font-family: "AvenirBold", "AvenirDemiBold", "AvenirRegular";
+  width: 100vw;
+
+  &__title {
+    margin: 10vw 5vw 7.5vw 5vw;
+  }
+  &__image {
+    width: 90vw;
+    height: 166px;
+  }
+  &__image-box {
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    font-family: "AvenirBold";
+    margin: 7.5vw 5vw 10vw 5vw;
+    text-align: justify;
+  }
+  &__sign {
+    font-family: AvenirDemiBold;
+    margin: 0 5vw;
+  }
+  &__names {
+    margin: 12.4vw 5vw 7.5vw 5vw;
+    font-size: 5vw;
+    &-text {
+      display: flex;
+      flex-direction: column;
+      margin: 0 5vw 12.4vw 5vw;
+
+      &__right {
+        font-family: AvenirRegular;
+      }
+      &__left {
+        font-family: AvenirRegular;
+      }
+    }
+  }
+}
+
+@include medium {
+  .about {
+    width: 100vw;
+
+    &__title {
+      margin: 5.2vw 3.1vw;
+      font-size: 5vw;
+    }
+    &__image {
+      width: 93.7vw;
+      height: 362px;
+    }
+    &__text {
+      font-size: 3.5vw;
+      font-family: AvenirBold;
+      margin-bottom: 4.5vw;
+    }
+    &__sign {
+      font-size: 2.5vw;
+      margin: 0 3.1vw;
+    }
+    &__names {
+      font-size: 3.5vw;
+      margin: 7vw 3.1vw 2vw 3.1vw;
+      &-text {
+        flex-direction: row;
+        margin: 2vw 3.1vw;
+        &__left {
+          margin-left: 3.1vw;
+        }
+      }
+    }
+  }
+}
+@include large {
+  .about {
+    &__title {
+      font-size: 4vw;
+      margin-left: 2vw;
+    }
+    &__image {
+      width: 50vw;
+      height: 30vw;
+    }
+    &__text {
+      font-size: 2.7vw;
+      margin: 5vw 10vw;
+    }
+    &__sign {
+      margin-left: 10vw;
+    }
+    &__names {
+      margin-left: 1vw;
+    }
+    &__names-text {
+      margin: 2vw 5vw;
+    }
+    &__musician {
+      margin: 0 10vw;
+    }
+  }
+}
+
+@include huge {
+  .about {
+    width: 100vw;
+
+    &__title {
+      font-size: 3vw;
+      margin: 3.3vw 12.5vw;
+    }
+    &__image {
+      width: 58vw;
+      height: 31.25vw;
+    }
+    &__text {
+      margin: 3.3vw 24vw 2.7vw 21vw;
+      font-size: 1.7vw;
+    }
+    &__sign {
+      font-size: 1.4vw;
+      margin-left: 21vw;
+    }
+    &__names {
+      font-size: 1.7vw;
+      margin-top: 2vw;
+    }
+    &__musician {
+      margin: 3.8vw 16vw 2.2vw 16vw;
+    }
+    &__names-text__left {
+      margin-left: 2.7vw;
+    }
+  }
+}

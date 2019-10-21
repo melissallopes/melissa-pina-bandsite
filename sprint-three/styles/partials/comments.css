@@ -1,0 +1,21 @@
+#add-comments {
+  margin: 5vw;
+}
+
+.comments__title {
+  font-size: 5vw;
+  font-family: AvenirBold;
+  padding: 6vw 3.1vw 3vw 0;
+  margin: 0 5vw 2.5vw 3.1vw;
+}
+
+.comments__add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=comments.css.map */

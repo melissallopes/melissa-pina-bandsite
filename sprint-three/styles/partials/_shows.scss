@@ -1,0 +1,288 @@
+.main {
+  &__image {
+    background-image: url(../assets/Images/josep-molina.jpg);
+    position: relative;
+    height: 147.5vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__pre-title {
+    font-family: AvenirBold;
+    font-size: 5vw;
+  }
+
+  &__text {
+    position: absolute;
+    margin: 12vw 5vw;
+    color: $White;
+    font-family: "AvenirDemiBold";
+    font-size: 11vw;
+    line-height: 11vw;
+
+    &--title {
+      margin: 0;
+    }
+  }
+
+  &__iframe {
+    position: absolute;
+    top: 85vw;
+
+    width: 90vw;
+    height: 12vh;
+  }
+}
+
+.table__title {
+  font-family: AvenirBold;
+  margin: 0 5vw 2.5vw 5vw;
+  text-align: left;
+  padding: 9.3vw 0 3.1vw 0;
+}
+.table-mobile {
+  width: 85vw;
+  margin: 0 auto;
+}
+
+.shows__tablet-top {
+  display: none;
+}
+.shows__mobile-table-title {
+  display: flex;
+  flex-direction: column;
+  color: $Silver;
+  font-family: AvenirDemiBold;
+  font-size: 5vw;
+  text-transform: uppercase;
+  padding: 4vw 0;
+}
+.shows__mobile-table-value:nth-child(2) {
+  font-family: AvenirDemiBold;
+}
+
+.shows__mobile-button {
+  background-color: $Black-opacity;
+  border-radius: 2vw;
+  color: white;
+  padding: 15px 32px;
+  font-size: 5vw;
+  margin: 5vw 0;
+  cursor: pointer;
+  width: 85vw;
+  text-align: center;
+  &:hover {
+    background-color: black;
+  }
+}
+
+.shows-table {
+  display: flex;
+  flex-direction: column;
+  margin: 5vw 0;
+  border-bottom: solid 0.5vw $Mercury;
+}
+
+/*media query for 768px tablet*/
+
+@include medium {
+  .main {
+    &__image {
+      height: 87.2vw;
+    }
+    &__text {
+      margin: 0;
+    }
+    &__pre-title {
+      margin: 7.5vw 3.1vw 2.2vw 3.1vw;
+      font-size: 3.5vw;
+    }
+
+    &__text--title {
+      font-size: 8vw;
+      font-family: AvenirBold;
+      margin: 0 3.1vw;
+      display: inline-block;
+      width: 75vw;
+    }
+    &__iframe {
+      width: 50vw;
+      height: 20vw;
+      top: 56vw;
+      margin-left: 3.1vw;
+    }
+  }
+
+  .table__title {
+    font-size: 5vw;
+    font-family: AvenirBold;
+    padding: 6vw 3.1vw 3vw 0;
+    margin: 0 5vw 2.5vw 3.1vw;
+  }
+
+  .table-mobile {
+    width: 100vw;
+    display: flex;
+    margin-bottom: 5vw;
+  }
+
+  .shows__tablet-top {
+    color: #afafaf;
+    font-family: AvenirDemiBold;
+    font-size: 1.8vw;
+    width: 55vw;
+
+    display: flex;
+    justify-content: space-between;
+    margin: 2vw 5vw 2vw 3.1vw;
+  }
+  .table-mobile tbody {
+    width: 100vw;
+  }
+  .shows-table {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin: 2vw 0 2vw 1vw;
+    border-bottom: 0.2vw solid $Mercury;
+    height: 12vw;
+    width: 95vw;
+    margin: 0 auto;
+  }
+  .shows__mobile-table-title {
+    display: none;
+  }
+  .shows__mobile-button {
+    display: inline-block;
+    width: 30vw;
+    height: 7vw;
+    font-size: 2vw;
+    padding: 2vw;
+    border-radius: 1vw;
+  }
+
+  .shows__mobile-table-value {
+    padding: 2vw;
+  }
+}
+
+@include large {
+  .main {
+    &__image {
+      height: 70vw;
+    }
+    &__text {
+    }
+    &__pre-title {
+      font-size: 2.5vw;
+      margin-left: 5vw;
+    }
+
+    &__text--title {
+      font-size: 6vw;
+      line-height: 7vw;
+      width: 60vw;
+      margin-left: 5vw;
+    }
+    &__iframe {
+      width: 40vw;
+      height: 15vw;
+      top: 46vw;
+      margin-left: 5vw;
+    }
+  }
+
+  .table__title {
+    font-size: 4vw;
+  }
+
+  .table-mobile {
+  }
+
+  .shows__tablet-top {
+    font-size: 1.4vw;
+  }
+  .table-mobile tbody {
+  }
+  .shows-table {
+    height: 6vw;
+  }
+  .shows__mobile-table-title {
+  }
+  .shows__mobile-button {
+    width: 20vw;
+    height: 5vw;
+    font-size: 1.3vw;
+    margin: 0;
+  }
+
+  .shows__mobile-table-value {
+    font-size: 1.3vw;
+  }
+}
+
+@include huge {
+  .main__image {
+    height: 46.5vw;
+  }
+  .main__text--title {
+    font-size: 3.5vw;
+    width: 35vw;
+    line-height: 1.6;
+  }
+
+  .main__pre-title {
+    font-size: 2vw;
+    margin-bottom: 0;
+  }
+  .main__iframe {
+    width: 28vw;
+    height: 12vw;
+    top: 22vw;
+    left: 50vw;
+    border-radius: 0.4vw;
+    margin-left: 3.1vw;
+  }
+  .table-tables {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .table-mobile {
+    overflow: hidden;
+    margin-bottom: 4vw;
+    margin-left: 0;
+  }
+  .table__title {
+    font-size: 2.5vw;
+    padding: 2vw;
+    height: 8vw;
+    margin-left: 7vw;
+    margin-right: 0;
+    margin-top: 3vw;
+  }
+
+  .shows-table {
+    width: 55vw;
+    height: 5vw;
+    border-bottom: solid 0.2vw $Mercury;
+  }
+  .shows__tablet-top {
+    justify-content: space-evenly;
+    font-size: 1vw;
+    float: right;
+    margin-right: 20vw;
+  }
+  .shows__mobile-table-value {
+    font-size: 0.9vw;
+  }
+  .shows__mobile-button {
+    margin: 0;
+    width: 9vw;
+    font-size: 0.9vw;
+    height: 2.7vw;
+    border-radius: 0.2vw;
+    padding: 0.7vw;
+  }
+}

@@ -1,0 +1,336 @@
+.comments {
+  margin: 5vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  &__title {
+    font-size: 1.5em;
+    margin: 10vw 5vw 12.5vw 5vw;
+    font-family: AvenirBold;
+  }
+
+  &__photo {
+    width: 16vw;
+    height: 16vw;
+    border-radius: 100%;
+    margin: 8vw 0;
+  }
+  &__name {
+    margin: 0 6vw 0 8vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name-input {
+    border: 0.5vw solid black;
+    border-radius: 1.2vw;
+    width: 60vw;
+    height: 14vw;
+    margin-top: 3vw;
+    padding: 4vw;
+  }
+
+  &__label {
+    color: $Silver;
+    font-family: AvenirDemiBold;
+    font-size: 4vw;
+  }
+  &__add {
+    margin: 0 6vw;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 6vw;
+  }
+
+  &__text-comment {
+    width: 60vw;
+    height: 27vw;
+    box-sizing: border-box;
+    border: 0.4vw solid $Mercury;
+    border-radius: 1.2vw;
+    background-color: $Alabaster;
+    resize: none;
+    margin-top: 3vw;
+    padding: 5vw;
+  }
+
+  &__button {
+    background-color: $Black-opacity;
+    border-radius: 2vw;
+    color: white;
+    padding: 15px 32px;
+    font-size: 4vw;
+    margin: 1.2vw;
+    cursor: pointer;
+    width: 60vw;
+    margin: 5vw 6vw;
+
+    &:hover {
+      background-color: black;
+    }
+  }
+  &__row {
+    margin: 10vw 0 15vw 0;
+  }
+  &__row-class {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    align-items: center;
+    margin: 0 5vw;
+    padding: 3.1vw 0;
+    font-size: 4.5vw;
+    border-top: solid 0.2vw $Mercury;
+    border-bottom: solid 0.2vw $Mercury;
+    border-collapse: collapse;
+  }
+  &__row-class:nth-child(2) {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  &__row-button {
+    background-color: $Mercury;
+    width: 13vw;
+    height: 13vw;
+    border-radius: 100vw;
+  }
+  &__row-name {
+    margin: 3vw 7vw 3vw 3vw;
+    font-family: AvenirDemiBold;
+    font-size: 5vw;
+    height: 7vw;
+    flex: 2;
+  }
+  &__row-date {
+    color: $Silver;
+    font-family: AvenirDemiBold;
+    font-size: 4vw;
+    margin: 0.5vw 1vw;
+    justify-self: end;
+  }
+  &__row-comment {
+    width: 100vw;
+    margin: 0 0 2vw 16vw;
+    text-align: left;
+  }
+}
+
+@include medium {
+  .comments {
+    width: 60vw;
+    margin: 0 auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+    &__title {
+      font-size: 5vw;
+      font-family: AvenirBold;
+      padding: 6vw 3.1vw 3vw 0;
+      margin: 0 5vw 2.5vw 3.1vw;
+    }
+    &__photo {
+      width: 7vw;
+      height: 7vw;
+      margin: 4vw 4vw 4vw 0;
+    }
+    &__label {
+      font-size: 2vw;
+    }
+    &__name {
+      margin: 0;
+      height: 15vw;
+    }
+
+    &__name-input {
+      width: 48vw;
+      height: 1vw;
+      padding: 3.2vw;
+      font-size: 2vw;
+      border-radius: 1vw;
+      margin-top: 1vw;
+    }
+    &__text {
+      margin: 0;
+    }
+    &__text-comment {
+      width: 48vw;
+      height: 13vw;
+      font-size: 2vw;
+      border-radius: 1vw;
+      padding: 2vw;
+      margin-top: 1vw;
+    }
+    &__button {
+      width: 20vw;
+      font-size: 2vw;
+      border-radius: 1vw;
+      margin: 3vw 0 0 0;
+    }
+  }
+  .comments__row {
+    margin: 4vw 0;
+    &-class {
+      width: 60vw;
+      font-size: 2vw;
+      margin: 0 auto;
+      padding: 2vw 0;
+    }
+    &-button {
+      width: 6vw;
+      height: 6vw;
+    }
+    &-name {
+      font-size: 2vw;
+      flex: 1;
+      text-align: left;
+      height: 4vw;
+      margin: 1.5vw 0 0 1vw;
+      width: fit-content;
+    }
+    &-comment {
+      font-size: 2vw;
+      margin: 1vw;
+    }
+    &-date {
+      font-size: 2vw;
+      flex: 2;
+    }
+  }
+}
+
+@include large {
+  .comments {
+    width: 50vw;
+    &__title {
+      font-size: 4vw;
+    }
+    &__name {
+      height: 10vw;
+    }
+    &__name-input {
+      width: 40vw;
+      padding: 2.5vw;
+      font-size: 1.2vw;
+      border-radius: 0.5vw;
+      border: solid $Black;
+      margin-top: 0.5vw;
+    }
+    &__label {
+      font-size: 1.3vw;
+    }
+    &__text-comment {
+      width: 40vw;
+      padding: 1.5vw;
+      font-size: 1.2vw;
+      border-radius: 0.5vw;
+      border: solid $Mercury;
+      margin-top: 0.5vw;
+      height: 10vw;
+    }
+    &__button {
+      width: 40vw;
+      width: 22vw;
+      font-size: 1.3vw;
+    }
+    &__photo {
+      width: 6vw;
+      height: 6vw;
+      margin: 0 2vw 2vw 0;
+    }
+  }
+  .comments__row {
+    &-class {
+      width: 50vw;
+    }
+    &-button {
+      width: 5vw;
+      height: 5vw;
+    }
+    &-name {
+      font-size: 1.3vw;
+      height: 2vw;
+    }
+    &-date {
+      font-size: 1.3vw;
+    }
+    &-comment {
+      font-size: 1.2vw;
+      margin-left: 6vw;
+    }
+  }
+}
+
+@include huge {
+  .comments {
+    width: 50vw;
+    &__title {
+      font-size: 3vw;
+      padding: 5vw 0;
+      margin: 0 12.5vw;
+    }
+    &__photo {
+      width: 5vw;
+      height: 5vw;
+      margin: 0 2vw 2vw;
+    }
+    &__label {
+      font-size: 1.2vw;
+    }
+    &__name {
+      height: 12vh;
+    }
+    &__name-input {
+      width: 40vw;
+      height: 1vw;
+      padding: 2.5vw;
+      font-size: 1.1vw;
+      border-radius: 0.5vw;
+      margin-top: 0.5vw;
+      border: solid $Black;
+    }
+    &__text-comment {
+      width: 40vw;
+      height: 10vw;
+      padding: 1.5vw;
+      font-size: 1.1vw;
+      border-radius: 0.5vw;
+      margin-top: 0.5vw;
+      border: solid $Mercury;
+    }
+    &__button {
+      width: 15vw;
+      font-size: 1.2vw;
+      border-radius: 0.5vw;
+      margin-top: 3vw;
+    }
+  }
+  .comments__row {
+    &-class {
+      width: 50vw;
+      padding: 1.5vw 0;
+    }
+    &-button {
+      width: 4vw;
+      height: 4vw;
+      margin: 0 2.4vw;
+    }
+    &-name {
+      font-size: 1.2vw;
+      height: 2vw;
+      margin: 0;
+    }
+    &-date {
+      font-size: 1.2vw;
+      font-family: AvenirRegular;
+    }
+    &-comment {
+      font-size: 1.1vw;
+      margin: 0;
+      margin-left: 9vw;
+    }
+  }
+}
