@@ -110,8 +110,8 @@ form.addEventListener("submit", submitEvent => {
 
   formNewComments.name = submitEvent.target.name.value;
   formNewComments.comment = submitEvent.target.newComment.value;
-  console.log(formNewComments);
-  console.log(commentsArray);
+  // console.log(formNewComments);
+  // console.log(commentsArray);
   commentsArray.unshift(formNewComments);
 
   createComment(commentsArray);

@@ -85,12 +85,11 @@
     padding: 3.1vw 0;
     font-size: 4.5vw;
     border-top: solid 0.2vw $Mercury;
-    border-bottom: solid 0.2vw $Mercury;
     border-collapse: collapse;
+    justify-content: flex-end;
   }
-  &__row-class:nth-child(2) {
-    border-top: none;
-    border-bottom: none;
+  &__row-class:nth-last-child(1) {
+    border-bottom: solid 0.2vw $Mercury;
   }
 
   &__row-button {
@@ -117,6 +116,18 @@
     width: 100vw;
     margin: 0 0 2vw 16vw;
     text-align: left;
+  }
+
+  &__button-delete {
+    background-image: url("../../61848.png");
+    background-size: contain;
+    // border-radius: 2vw;
+    color: white;
+    margin: 2vw;
+    border: none;
+    /* cursor: pointer; */
+    width: 5vw;
+    height: 5vw;
   }
 }
 
@@ -179,6 +190,17 @@
       margin: 0 auto;
       padding: 2vw 0;
     }
+
+    &-class:nth-child(3) {
+      border-bottom: none;
+    }
+    &-class:nth-child(4) {
+      border-bottom: none;
+    }
+    &-class:nth-child(5) {
+      border-bottom: none;
+    }
+
     &-button {
       width: 6vw;
       height: 6vw;

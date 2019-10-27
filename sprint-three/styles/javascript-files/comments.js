@@ -1,120 +1,177 @@
+const ALL_USERS =
+  "https://project-1-api.herokuapp.com/comments?api_key=melissa";
+
+const USER_ONE_delete =
+  "https://project-1-api.herokuapp.com/comments/3611dba6-b414-45e5-a105-bcee87b7fd4e?api_key=melissa";
+
+const USER_TWO_delete =
+  "https://project-1-api.herokuapp.com/comments/9e5c96f3-ecff-4f2e-b372-17bbd82c7fe2?api_key=melissa";
+
+const USER_THREE_delete =
+  "https://project-1-api.herokuapp.com/comments/efa6198a-d252-49a9-8a5c-a761b9f443db?api_key=melissa";
+
+//FUNCTION FOR CREATING COMMENTS
+
 function createComment(commentsArray) {
   const commentSection = document.querySelector(".comments__row");
 
-  for (let i = 0; i < commentsArray.length; i++) {
+  for (let i = commentsArray.length - 1; i >= 0; i--) {
     let commentOne = document.createElement("div");
-    commentOne.classList.add("comments__row-class");
-    commentSection.appendChild(commentOne);
-    console.log("check", commentsArray[i]);
 
     let button = document.createElement("button");
-    commentOne.appendChild(button);
-    button.classList.add("comments__row-button");
 
     let nameTitle = document.createElement("h2");
-    commentOne.appendChild(nameTitle);
     nameTitle.innerText = commentsArray[i].name;
-    nameTitle.classList.add("comments__row-name");
 
+    // Function for Dynamic Timestamp
+
+    // function timeDiffer(timestamp) {
+
+    function timeDiffer(timestamp) {
+      var today = new Date();
+      var current = today.getTime();
+
+      var msPerMinute = 60 * 1000;
+      var msPerHour = msPerMinute * 60;
+      var msPerDay = msPerHour * 24;
+      var msPerMonth = msPerDay * 30;
+      var msPerYear = msPerDay * 365;
+
+      var elapsed = current - timestamp;
+
+      if (elapsed < msPerMinute) {
+        return Math.round(elapsed / 1000) + " seconds ago";
+      } else if (elapsed < msPerHour) {
+        return Math.round(elapsed / msPerMinute) + " minutes ago";
+      } else if (elapsed < msPerDay) {
+        return Math.round(elapsed / msPerHour) + " hours ago";
+      } else if (elapsed < msPerMonth) {
+        return "approximately " + Math.round(elapsed / msPerDay) + " days ago";
+      } else if (elapsed < msPerYear) {
+        return (
+          "approximately " + Math.round(elapsed / msPerMonth) + " months ago"
+        );
+      } else var date = new Date(timestamp);
+      function addZero(n) {
+        return n < 10 ? "0" + n : n;
+      }
+
+      var dateTwo =
+        addZero(date.getMonth() + 1) +
+        "/" +
+        addZero(date.getDate()) +
+        "/" +
+        date.getFullYear();
+
+      return dateTwo;
+    }
+
+    let date = timeDiffer(commentsArray[i].timestamp);
     let dateTitle = document.createElement("h3");
-    commentOne.appendChild(dateTitle);
-    dateTitle.innerText = commentsArray[i].timestamp;
-    dateTitle.classList.add("comments__row-date");
+    dateNode = document.createTextNode(date);
+    dateTitle.appendChild(dateNode);
 
     let commentElement = document.createElement("p");
-    commentOne.appendChild(commentElement);
     commentElement.innerText = commentsArray[i].comment;
+
+    ////////////////////////////test//////////////////////////////////
+
+    //LIKE BUTTON
+    let iconNumber = document.createElement("p");
+    let iconLike = document.createElement("img");
+    iconNumber.innerText = commentsArray[i].likes;
+
+    iconLike.addEventListener("click", clickEvent => {
+      axios.put(USER_ONE_like).then(response => {
+        iconNumber.innerText = commentsArray.like;
+      });
+    });
+
+    iconLike.classList.add("comments__row-icon-like");
+
+    //DELETE 1 BUTTON
+    let iconDel = document.createElement("img");
+    iconDel.addEventListener("click", clickEvent => {
+      axios.delete(USER_ONE_delete).then(response => {
+        commentOne.style.display = "none";
+      });
+    });
+
+    //DELETE 2 BUTTON
+
+    iconDel.addEventListener("click", clickEvent => {
+      axios.delete(USER_ONE_delete).then(response => {
+        commentOne.style.display = "none";
+      });
+    });
+
+    ////////////////////////////test//////////////////////////////////
+
+    //appendinding childs
+    commentOne.appendChild(button);
+    commentOne.appendChild(nameTitle);
+    commentOne.appendChild(dateTitle);
+    commentOne.appendChild(commentElement);
+    commentOne.appendChild(iconLike);
+    commentOne.appendChild(iconDel);
+    commentSection.appendChild(commentOne);
+
+    //creating classes
+    commentOne.classList.add("comments__row-class");
+    button.classList.add("comments__row-button");
+    nameTitle.classList.add("comments__row-name");
+    dateTitle.classList.add("comments__row-date");
     commentElement.classList.add("comments__row-comment");
+    iconDel.classList.add("comments__button-delete");
   }
 }
 
+//GETTING DATA FROM AXIO
+
+let commentsArray = [];
+
 let com = axios
-  .get("https://project-1-api.herokuapp.com/comments?api_key=melissa")
+  .get(ALL_USERS)
   .then(response => {
-    console.log(response.data);
+    commentsArray = response.data;
 
     return response.data;
   })
 
   .then(response => {
-    console.log("response", response);
     createComment(response);
   });
 
-// let commentsArray = [
-//   {
-//     name: "Michael Lyons",
-//     comment:
-//       "They BLEW the ROOF off at their last show, once everyone started figuring out they were going. This is still simply the greatest opening of a concert I have EVER witnessed.",
-//     date: "12/18/2018"
-//   },
-//   {
-//     name: "Gary Wong",
-//     comment:
-//       "Every time I see him shred I feel so motivated to get off my couch and hop on my board. He’s so talented! I wish I can ride like him one day so I can really enjoy myself!",
-//     date: "12/12/2018"
-//   },
-//   {
-//     name: "Theodore Duncan",
-//     comment:
-//       "How can someone be so good!!! You can tell he lives for this and loves to do it every day. Everytime I see him I feel instantly happy! He’s definitely my favorite ever!",
-//     date: "11/15/2018"
-//   }
-// ];
-
-// createComment(commentsArray);
-
-// function createComment(commentsArray) {
-//   const commentSection = document.querySelector(".comments__row");
-
-//   for (let i = 0; i < com.length; i++) {
-//     let commentOne = document.createElement("div");
-//     commentOne.classList.add("comments__row-class");
-//     commentSection.appendChild(commentOne);
-
-//     let button = document.createElement("button");
-//     commentOne.appendChild(button);
-//     button.classList.add("comments__row-button");
-
-//     let nameTitle = document.createElement("h2");
-//     commentOne.appendChild(nameTitle);
-//     nameTitle.innerText = commentsArray[i].name;
-//     nameTitle.classList.add("comments__row-name");
-
-//     let dateTitle = document.createElement("h3");
-//     commentOne.appendChild(dateTitle);
-//     dateTitle.innerText = commentsArray[i].date;
-//     dateTitle.classList.add("comments__row-date");
-
-//     let commentElement = document.createElement("p");
-//     commentOne.appendChild(commentElement);
-//     commentElement.innerText = com[i].comment;
-//     commentElement.classList.add("comments__row-comment");
-//   }
-// }
+//ADDLISTENER EVENT
 
 let form = document.querySelector(".comments");
 
 form.addEventListener("submit", submitEvent => {
   submitEvent.preventDefault();
 
+  //to clean the div
   document.querySelector(".comments__row").innerHTML = "";
 
-  let d = new Date();
-  let day = d.getDate();
-  let month = d.getMonth() + 1;
-  let year = d.getFullYear();
-  let todayDate = day + "/" + month + "/" + year;
+  //creating my new object
+  let newComments = {
+    name: "",
+    comment: ""
+  };
 
-  let formNewComments = { name: "", comment: "", date: todayDate };
+  newComments.name = submitEvent.target.name.value;
+  newComments.comment = submitEvent.target.newComment.value;
 
-  formNewComments.name = submitEvent.target.name.value;
-  formNewComments.comment = submitEvent.target.newComment.value;
-  console.log(formNewComments);
-  console.log(commentsArray);
-  commentsArray.unshift(formNewComments);
+  //UNSHIFT MY NEW OBJ INTO MY ARRAY AND POSTING IT IN THE PAGE
+  axios
+    .post(ALL_USERS, newComments)
 
-  createComment(commentsArray);
+    .then(response => {
+      response.data;
+
+      commentsArray.unshift(response.data);
+
+      createComment(commentsArray);
+    });
 
   submitEvent.target.reset();
 });

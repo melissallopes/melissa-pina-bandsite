@@ -16,26 +16,26 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    margin: 4.6vw;
     padding: 0;
+    margin: 0;
+  }
+  &__items li {
+    width: 50vw;
+    padding: 5vw;
+    text-align: center;
+
+    &:hover {
+      border-bottom: solid white;
+    }
+    &:active {
+      border-bottom: solid white;
+    }
   }
 
   &__link {
     text-decoration: none;
     color: $Mercury;
     font-size: 4vw;
-    margin: 8.1vw;
-    padding-bottom: 3.4vw;
-
-    &:hover {
-      color: $White;
-      border-bottom: solid white;
-    }
-
-    &:active {
-      color: $White;
-      border-bottom: solid white;
-    }
   }
 }
 
@@ -54,9 +54,16 @@
     }
 
     &__items {
+      height: 10vw;
       flex-direction: row;
       margin: 0;
       justify-content: space-evenly;
+    }
+    &__items li {
+      width: 20vw;
+      padding: 4vw;
+      // height: 5vw;
+      // padding: 5.5vw;
     }
     &__link {
       padding-bottom: 3.4vw;
@@ -76,8 +83,17 @@
     }
     &__link {
       font-size: 1.2vw;
-      padding-bottom: 1.3vw;
+      margin: 0;
+      padding: 0;
     }
+    &__items li {
+      width: 13vw;
+      height: 5vw;
+      padding: 3.2vw;
+    }
+  }
+  .nav-nav {
+    height: 8.5vw;
   }
 }
 
@@ -89,6 +105,7 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    align-items: center;
 
     &--logo {
       width: 8vw;
@@ -97,11 +114,18 @@
     }
     &__link {
       font-size: 0.9vw;
-      margin: 0 3.8vw 0 0;
-      padding-bottom: 1.2vw;
+      margin: 0 auto;
+      padding: 0;
     }
     &__items {
-      margin: 0;
     }
+    &__items li {
+      padding: 4vw 2vw 2.5vw 2vw;
+      width: 10vw;
+      height: 5vw;
+    }
+  }
+  .nav-nav {
+    height: 9.5vw;
   }
 }

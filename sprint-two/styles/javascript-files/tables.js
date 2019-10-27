@@ -1,30 +1,34 @@
-const showInfo = [
-  {
-    date: "Dec 17 2018",
-    venue: "Ronald Lane",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Jul 18 2019",
-    venue: "Pier 3 East",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Jul 22 2019",
-    venue: "View Loungue",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Aug 12 2019",
-    venue: "Hyatt Agency",
-    location: "San Fancisco, CA"
-  },
-  {
-    date: "Sep 05 2019",
-    venue: "Pres Club",
-    location: "San Fancisco, CA"
-  }
-];
+// const showInfo = [
+//   {
+//     date: "Dec 17 2018",
+//     venue: "Ronald Lane",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Jul 18 2019",
+//     venue: "Pier 3 East",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Jul 22 2019",
+//     venue: "View Loungue",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Aug 12 2019",
+//     venue: "Hyatt Agency",
+//     location: "San Fancisco, CA"
+//   },
+//   {
+//     date: "Sep 05 2019",
+//     venue: "Pres Club",
+//     location: "San Fancisco, CA"
+//   }
+// ];
+
+table SPRINT 2
+
+const table = document.querySelector(".table-mobile");
 
 function tableMobile(table, showInfo) {
   let rowTop = table.insertRow();
@@ -63,16 +67,69 @@ function tableMobile(table, showInfo) {
     cell.classList.add("shows__mobile-button");
     let text = document.createTextNode("BUY TICKETS");
     cell.appendChild(text);
-    // let rowTwo = table.insertRow();
-    // let cell = rowTwo.insertCell();
-    // cell.classList.add("shows__mobile-button");
-    // let text = document.createTextNode("BUY TICKETS");
-    // cell.appendChild(text);
   }
 }
 
-let table = document.querySelector(".table-mobile");
 
-//let showKeys = Object.keys(showInfo[0]);
 // function invocation
-tableMobile(table, showInfo);
+// tableMobile(table, showInfo);
+
+let shows = axios
+  .get("https://project-1-api.herokuapp.com/showdates?api_key=melissa")
+  .then(response => {
+    console.log(response.data);
+
+    return response.data;
+  })
+
+  .then(response => {
+    console.log("response", response); //testing
+    createDivMobile(response);
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//testing- create div
+
+// function createDivMobile(showInfo) {
+//   const mainDiv = document.querySelector(".table-mobile");
+
+//   for (let i = 0; i < showInfo.length; i++) {
+//     let divOne = document.createElement("div");
+//     divOne.classList.add("div-class");
+//     mainDiv.appendChild(divOne);
+
+//     let dateKey = document.createElement("p");
+//     divOne.appendChild(date[key]);
+//     dateKey.innerText = showInfo[i].date[key];
+//     dateKey.classList.add("date-class-key");
+
+//     let date = document.createElement("p");
+//     divOne.appendChild(date);
+//     date.innerText = showInfo[i].date;
+//     date.classList.add("date-class");
+
+//     let location = document.createElement("p");
+//     divOne.appendChild(location);
+//     location.innerText = showInfo[i].location;
+//     location.classList.add("name-class");
+
+//     let place = document.createElement("p");
+//     divOne.appendChild(place);
+//     place.innerText = showInfo[i].place;
+//     place.classList.add("place-class");
+//   }
+// }

@@ -52,31 +52,32 @@
     }
 
     &__title {
-      padding: 3vw 3vw 3vw 0vw;
+      padding: 3vw 3vw 3vw 2vw;
       margin: 2.9vw;
       margin-right: 0;
-      font-size: 5vw;
+      font-size: 4.2vw;
     }
     &__icons {
       align-self: center;
+      height: 6vw;
     }
     &__logo {
       display: inline-block;
-      width: 15vw;
+      width: 12.5vw;
       height: 15vw;
       margin: 1.2vw 0 0 20vw;
     }
     &__names {
-      font-size: 1.6vw;
-      padding: 1.1vw;
+      font-size: 1.3vw;
       margin: 0;
       &--padding {
-        padding: 2vw 2vw 5vw 2vw;
+        padding: 5vw 2vw 5vw 4vw;
+        font-size: 1.4vw;
       }
     }
     &__allnames {
       display: flex;
-      justify-content: center;
+      justify-content: space-around;
     }
   }
 }
@@ -87,26 +88,35 @@
 @include large {
   .footer {
     &__title {
-      font-size: 4vw;
-      margin-left: 2vw;
-      margin-bottom: 0;
-      padding-bottom: 0;
+      font-size: 3vw;
+      margin-left: 1vw;
     }
     &__logo {
-      width: 13vw;
-      height: 15vw;
-      margin-left: 24vw;
+      width: 10vw;
+      height: 10vw;
+      margin: 2.3vw 0 0 43vw;
+    }
+    &__head {
+      justify-content: flex-start;
     }
     &__icons {
-      padding-top: 3vw;
-      margin-left: 9vw;
+      margin-left: 2.8vw;
+    }
+    &__allnames {
+      justify-content: flex-start;
     }
     &__names {
-      font-size: 1.2vw;
-      margin: 0 5vw;
+      margin: 0 3.1vw;
+      font-size: 1.1vw;
+      margin-right: 0;
       &--padding {
-        margin-left: 1.3vw;
+        padding: 3vw;
+        margin: 0;
       }
+    }
+
+    .icons {
+      height: 1.3vw;
     }
   }
 }
@@ -114,34 +124,31 @@
 @include huge {
   .footer {
     &__head {
-      margin-left: 9vw;
+      height: 12vw;
+      align-items: center;
     }
     &__title {
       font-size: 3vw;
       padding-right: 2vw;
     }
     &__logo {
-      width: 10vw;
-      height: 12vw;
-      margin-left: 41vw;
+      width: 8vw;
+      height: 10vw;
+      margin-top: 0;
     }
     &__icons {
-      margin-left: 2vw;
-      padding-top: 3vw;
+      margin: 3vw 0 0 1.2vw;
     }
     &__names {
       font-size: 0.9vw;
-      margin: 0;
+      margin: 0 3.1vw;
+      margin-right: 0;
       &--padding {
-        margin-left: 9vw;
+        margin: 0;
       }
-    }
-    &__allnames {
-      justify-content: flex-start;
-      margin-left: 10vw;
     }
   }
   .icons {
-    margin: 2vw 1vw;
+    margin: 1vw;
   }
 }
