@@ -55,21 +55,6 @@ function createComment(commentsArray) {
     let commentElement = document.createElement("p");
     commentElement.innerText = commentsArray[i].comment;
 
-    //LIKE button
-
-    let iconLike = document.createElement("img");
-    let iconLikeNumber = document.createElement("p");
-    iconLikeNumber.innerText = commentsArray[i].likes;
-
-    iconLike.addEventListener("click", clickEvent => {
-      clickEvent.preventDefault();
-      axios
-        .put(USERS + commentsArray[i].id + "/like" + USERS_KEY)
-        .then(response => {
-          iconLikeNumber.innerText = commentsArray[i].likes + 1;
-        });
-    });
-
     //DELETE button
     let iconDel = document.createElement("button");
     iconDel.addEventListener("click", clickEvent => {
@@ -84,8 +69,6 @@ function createComment(commentsArray) {
     commentOne.appendChild(nameTitle);
     commentOne.appendChild(dateTitle);
     commentOne.appendChild(commentElement);
-    commentOne.appendChild(iconLike);
-    commentOne.appendChild(iconLikeNumber);
     commentOne.appendChild(iconDel);
     commentSection.appendChild(commentOne);
 
@@ -95,8 +78,6 @@ function createComment(commentsArray) {
     nameTitle.classList.add("comments__row-name");
     dateTitle.classList.add("comments__row-date");
     commentElement.classList.add("comments__row-comment");
-    iconLike.classList.add("comments__icon-like");
-    iconLikeNumber.classList.add("comments__icon-number-like");
     iconDel.classList.add("comments__button-delete");
   }
 }
