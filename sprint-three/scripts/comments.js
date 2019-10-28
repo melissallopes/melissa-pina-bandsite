@@ -1,14 +1,9 @@
 const ALL_USERS =
   "https://project-1-api.herokuapp.com/comments?api_key=melissa";
 
-const USER_ONE_delete =
-  "https://project-1-api.herokuapp.com/comments/3611dba6-b414-45e5-a105-bcee87b7fd4e?api_key=melissa";
+const USERS = "https://project-1-api.herokuapp.com/comments/";
 
-const USER_TWO_delete =
-  "https://project-1-api.herokuapp.com/comments/9e5c96f3-ecff-4f2e-b372-17bbd82c7fe2?api_key=melissa";
-
-const USER_THREE_delete =
-  "https://project-1-api.herokuapp.com/comments/efa6198a-d252-49a9-8a5c-a761b9f443db?api_key=melissa";
+const USERS_KEY = "?api_key=melissa";
 
 //FUNCTION FOR CREATING COMMENTS
 
@@ -24,8 +19,6 @@ function createComment(commentsArray) {
     nameTitle.innerText = commentsArray[i].name;
 
     // Function for Dynamic Timestamp
-
-    // function timeDiffer(timestamp) {
 
     function timeDiffer(timestamp) {
       var today = new Date();
@@ -46,24 +39,12 @@ function createComment(commentsArray) {
       } else if (elapsed < msPerDay) {
         return Math.round(elapsed / msPerHour) + " hours ago";
       } else if (elapsed < msPerMonth) {
-        return "approximately " + Math.round(elapsed / msPerDay) + " days ago";
+        return Math.round(elapsed / msPerDay) + " days ago";
       } else if (elapsed < msPerYear) {
-        return (
-          "approximately " + Math.round(elapsed / msPerMonth) + " months ago"
-        );
-      } else var date = new Date(timestamp);
-      function addZero(n) {
-        return n < 10 ? "0" + n : n;
+        return Math.round(elapsed / msPerMonth) + " months ago";
+      } else {
+        return Math.round(elapsed / msPerYear) + " year ago";
       }
-
-      var dateTwo =
-        addZero(date.getMonth() + 1) +
-        "/" +
-        addZero(date.getDate()) +
-        "/" +
-        date.getFullYear();
-
-      return dateTwo;
     }
 
     let date = timeDiffer(commentsArray[i].timestamp);
@@ -74,38 +55,29 @@ function createComment(commentsArray) {
     let commentElement = document.createElement("p");
     commentElement.innerText = commentsArray[i].comment;
 
-    ////////////////////////////test//////////////////////////////////
+    //LIKE button
 
-    //LIKE BUTTON
-    let iconNumber = document.createElement("p");
     let iconLike = document.createElement("img");
-    iconNumber.innerText = commentsArray[i].likes;
+    let iconLikeNumber = document.createElement("p");
+    iconLikeNumber.innerText = commentsArray[i].likes;
 
     iconLike.addEventListener("click", clickEvent => {
-      axios.put(USER_ONE_like).then(response => {
-        iconNumber.innerText = commentsArray.like;
-      });
+      clickEvent.preventDefault();
+      axios
+        .put(USERS + commentsArray[i].id + "/like" + USERS_KEY)
+        .then(response => {
+          iconLikeNumber.innerText = commentsArray[i].likes + 1;
+        });
     });
 
-    iconLike.classList.add("comments__row-icon-like");
-
-    //DELETE 1 BUTTON
-    let iconDel = document.createElement("img");
+    //DELETE button
+    let iconDel = document.createElement("button");
     iconDel.addEventListener("click", clickEvent => {
-      axios.delete(USER_ONE_delete).then(response => {
+      clickEvent.preventDefault();
+      axios.delete(USERS + commentsArray[i].id + USERS_KEY).then(response => {
         commentOne.style.display = "none";
       });
     });
-
-    //DELETE 2 BUTTON
-
-    iconDel.addEventListener("click", clickEvent => {
-      axios.delete(USER_ONE_delete).then(response => {
-        commentOne.style.display = "none";
-      });
-    });
-
-    ////////////////////////////test//////////////////////////////////
 
     //appendinding childs
     commentOne.appendChild(button);
@@ -113,6 +85,7 @@ function createComment(commentsArray) {
     commentOne.appendChild(dateTitle);
     commentOne.appendChild(commentElement);
     commentOne.appendChild(iconLike);
+    commentOne.appendChild(iconLikeNumber);
     commentOne.appendChild(iconDel);
     commentSection.appendChild(commentOne);
 
@@ -122,6 +95,8 @@ function createComment(commentsArray) {
     nameTitle.classList.add("comments__row-name");
     dateTitle.classList.add("comments__row-date");
     commentElement.classList.add("comments__row-comment");
+    iconLike.classList.add("comments__icon-like");
+    iconLikeNumber.classList.add("comments__icon-number-like");
     iconDel.classList.add("comments__button-delete");
   }
 }
@@ -134,7 +109,6 @@ let com = axios
   .get(ALL_USERS)
   .then(response => {
     commentsArray = response.data;
-
     return response.data;
   })
 
@@ -168,7 +142,7 @@ form.addEventListener("submit", submitEvent => {
     .then(response => {
       response.data;
 
-      commentsArray.unshift(response.data);
+      commentsArray.push(response.data);
 
       createComment(commentsArray);
     });

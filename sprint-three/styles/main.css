@@ -226,7 +226,7 @@
 @media only screen and (min-width: 1024px) {
   .hero__text {
     font-size: 4vw;
-    margin-left: 2vw;
+    margin-left: 5vw;
   }
   .hero__image-one {
     height: 45vw;
@@ -341,7 +341,7 @@
 @media only screen and (min-width: 1024px) {
   .about__title {
     font-size: 4vw;
-    margin-left: 2vw;
+    margin-left: 5vw;
   }
   .about__image {
     width: 50vw;
@@ -462,6 +462,7 @@
 @media only screen and (min-width: 1024px) {
   .gallery__title {
     font-size: 4vw;
+    margin-left: 5vw;
   }
   .gallery__photos {
     width: 26vw;
@@ -981,8 +982,8 @@
   .main__iframe {
     width: 28vw;
     height: 11vw;
-    top: 26vw;
-    left: 50vw;
+    top: 23.5vw;
+    left: 59vw;
     border-radius: 0.4vw;
     margin-left: 3.1vw;
   }
@@ -1061,7 +1062,7 @@
 }
 
 .comments__name-input {
-  border: 0.5vw solid black;
+  border: 0.3vw solid black;
   border-radius: 1.2vw;
   width: 60vw;
   height: 14vw;
@@ -1179,14 +1180,28 @@
 }
 
 .comments__button-delete {
-  background-image: url("../../61848.png");
+  background-image: url("../assets/Icons/PNG/delete-button.png");
   background-size: contain;
-  color: white;
-  margin: 2vw;
-  border: none;
-  /* cursor: pointer; */
+  background-repeat: no-repeat;
+  cursor: pointer;
   width: 5vw;
   height: 5vw;
+  margin: 2vw;
+}
+
+.comments__icon-like {
+  background-image: url("../assets/Icons/PNG/facebook-like--v2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 5vw;
+  height: 5vw;
+  margin: 2vw;
+}
+
+.comments__icon-number-like {
+  font-size: 2vw;
+  font-family: AvenirRegular;
 }
 
 @media only screen and (min-width: 768px) {
@@ -1207,59 +1222,64 @@
     margin: 0 5vw 2.5vw 3.1vw;
   }
   .comments__photo {
-    width: 7vw;
-    height: 7vw;
-    margin: 4vw 4vw 4vw 0;
+    width: 6vw;
+    height: 6vw;
+    margin: 3vw 3vw 5vw 0;
   }
   .comments__label {
-    font-size: 2vw;
+    font-size: 1.8vw;
   }
   .comments__name {
     margin: 0;
     height: 15vw;
   }
   .comments__name-input {
-    width: 48vw;
-    height: 1vw;
-    padding: 3.2vw;
-    font-size: 2vw;
-    border-radius: 1vw;
+    width: 50vw;
+    height: 0.5vw;
+    padding: 2.5vw;
+    font-size: 1.8vw;
+    border-radius: 0.8vw;
     margin-top: 1vw;
   }
   .comments__text {
     margin: 0;
   }
   .comments__text-comment {
-    width: 48vw;
-    height: 13vw;
-    font-size: 2vw;
-    border-radius: 1vw;
+    width: 50vw;
+    height: 12vw;
+    font-size: 1.8vw;
+    border-radius: 0.5vw;
+    border: #E1E1E1 solid 0.2vw;
     padding: 2vw;
     margin-top: 1vw;
   }
   .comments__button {
-    width: 20vw;
-    font-size: 2vw;
+    width: 18vw;
+    font-size: 1.5vw;
     border-radius: 1vw;
     margin: 3vw 0 0 0;
+  }
+  .comments__icon-like {
+    width: 2vw;
+    height: 2vw;
+    margin: 1vw;
+  }
+  .comments__icon-number-like {
+    font-size: 1.7vw;
+  }
+  .comments__button-delete {
+    width: 2vw;
+    height: 2vw;
+    margin: 1vw;
   }
   .comments__row {
     margin: 4vw 0;
   }
   .comments__row-class {
     width: 60vw;
-    font-size: 2vw;
+    font-size: 1.8vw;
     margin: 0 auto;
     padding: 2vw 0;
-  }
-  .comments__row-class:nth-child(3) {
-    border-bottom: none;
-  }
-  .comments__row-class:nth-child(4) {
-    border-bottom: none;
-  }
-  .comments__row-class:nth-child(5) {
-    border-bottom: none;
   }
   .comments__row-button {
     width: 6vw;
@@ -1291,67 +1311,82 @@
 
 @media only screen and (min-width: 1024px) {
   .comments {
-    width: 50vw;
+    width: 45vw;
   }
   .comments__title {
     font-size: 4vw;
+    margin-left: 5vw;
   }
   .comments__name {
-    height: 10vw;
+    height: 9vw;
   }
   .comments__name-input {
-    width: 40vw;
-    padding: 2.5vw;
-    font-size: 1.2vw;
+    width: 35vw;
+    padding: 2vw;
+    font-size: 1.1vw;
     border-radius: 0.5vw;
-    border: solid #323232;
+    border: solid 0.2vw #323232;
     margin-top: 0.5vw;
   }
   .comments__label {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
   }
   .comments__text-comment {
-    width: 40vw;
+    width: 35vw;
     padding: 1.5vw;
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     border-radius: 0.5vw;
-    border: solid #E1E1E1;
+    border: solid 0.15vw #E1E1E1;
     margin-top: 0.5vw;
-    height: 10vw;
+    height: 9vw;
   }
   .comments__button {
-    width: 40vw;
-    width: 22vw;
-    font-size: 1.3vw;
+    width: 15vw;
+    border-radius: 0.4vw;
+    font-size: 1.1vw;
   }
   .comments__photo {
-    width: 6vw;
-    height: 6vw;
-    margin: 0 2vw 2vw 0;
-  }
-  .comments__row-class {
-    width: 50vw;
-  }
-  .comments__row-button {
     width: 5vw;
     height: 5vw;
+    margin: 0 2vw 3vw 0;
+  }
+  .comments__icon-like {
+    width: 1.6vw;
+    height: 1.6vw;
+    margin: 0.5vw;
+  }
+  .comments__icon-number-like {
+    font-size: 1.1vw;
+  }
+  .comments__button-delete {
+    width: 1.6vw;
+    height: 1.6vw;
+    margin: 0.5vw;
+  }
+  .comments__row-class {
+    width: 45vw;
+    padding: 1vw 0;
+  }
+  .comments__row-button {
+    width: 4vw;
+    height: 4vw;
   }
   .comments__row-name {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     height: 2vw;
   }
   .comments__row-date {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
   }
   .comments__row-comment {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
     margin-left: 6vw;
   }
 }
 
 @media only screen and (min-width: 1440px) {
   .comments {
-    width: 50vw;
+    width: 45vw;
   }
   .comments__title {
     font-size: 3vw;
@@ -1359,60 +1394,71 @@
     margin: 0 12.5vw;
   }
   .comments__photo {
-    width: 5vw;
-    height: 5vw;
-    margin: 0 2vw 2vw;
+    width: 4vw;
+    height: 4vw;
+    margin: 0 2vw 3.2vw;
   }
   .comments__label {
-    font-size: 1.2vw;
+    font-size: 1.1vw;
   }
   .comments__name {
     height: 12vh;
   }
   .comments__name-input {
-    width: 40vw;
+    width: 35vw;
     height: 1vw;
-    padding: 2.5vw;
-    font-size: 1.1vw;
+    padding: 2vw;
+    font-size: 1vw;
     border-radius: 0.5vw;
     margin-top: 0.5vw;
     border: solid #323232;
   }
   .comments__text-comment {
-    width: 40vw;
-    height: 10vw;
+    width: 35vw;
+    height: 8vw;
     padding: 1.5vw;
-    font-size: 1.1vw;
+    font-size: 1vw;
     border-radius: 0.5vw;
     margin-top: 0.5vw;
     border: solid #E1E1E1;
   }
   .comments__button {
-    width: 15vw;
-    font-size: 1.2vw;
+    width: 12vw;
+    font-size: 1vw;
     border-radius: 0.5vw;
     margin-top: 3vw;
   }
+  .comments__icon-like {
+    width: 1.2vw;
+    height: 1.2vw;
+  }
+  .comments__icon-number-like {
+    font-size: 0.8vw;
+  }
+  .comments__button-delete {
+    width: 1.2vw;
+    height: 1.2vw;
+  }
   .comments__row-class {
-    width: 50vw;
+    width: 45vw;
     padding: 1.5vw 0;
   }
   .comments__row-button {
-    width: 4vw;
-    height: 4vw;
+    width: 3.5vw;
+    height: 3.5vw;
     margin: 0 2.4vw;
   }
   .comments__row-name {
-    font-size: 1.2vw;
+    font-size: 1vw;
     height: 2vw;
     margin: 0;
   }
   .comments__row-date {
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-family: AvenirRegular;
   }
   .comments__row-comment {
-    font-size: 1.1vw;
+    font-size: 0.9vw;
     margin: 0;
     margin-left: 9vw;
   }
